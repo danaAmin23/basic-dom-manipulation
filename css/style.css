@@ -1,0 +1,58 @@
+label,
+input {
+    margin: 1pc;
+}
+
+input {
+    border: 1px solid grey;
+    text-align: center;
+}
+
+#lblBirthYear {
+    margin-right: 0;
+}
+
+#txtBirthYear {
+    margin-left: 10px;
+}
+
+#content,#content2 {
+    border: 1px solid black;
+    width: 28pc;
+}
+
+img {
+    height: 5pc;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol li {
+    margin-bottom: 1pc;
+    border: 1px solid black;
+    width: 40pc;
+    text-align: center;
+}
+
+#basket img {
+    display: none;
+}
+
+#books-list p{
+    display: none;
+}
+
+#books-list img{
+    margin-left:6pc;
+    margin-right: 3pc;
+}
+
+.admin{
+    display:none;
+}
+
+#remove h3{
+text-align:center;
+}

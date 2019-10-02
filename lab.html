@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src=".//scripts/script.js">
+    </script>
+
+    <script>
+
+        /*
+
+        8. If the name is “admin” and year of birth is “1867” Display “Librarian” as the
+         name and provide management functionality below:
+
+        a. A mechanism to add new items.
+        b. A mechanism to remove existing items.
+        c.A mechanism to change the due date for books and CD’s
+        d. A logout button to return to normal operation.
+
+        - replace current div with admin form
+        - form - dropdown with all the
+        */
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>SE 3316A Web Technologies Lab #2:</h1>
+    <hr>
+    <h1>User Information a1 )</h1>
+    <br>
+
+    <div id="content">
+        <form onsubmit="formSubmit(event)">
+
+            <label id="lblName">name : </label> <input type='text' placeholder="John Doe" id="txtName" maxlength="100"
+                onkeyup="validate()" class="user"> <br>
+            <label id="lblEmail">email : </label> <input type='email' placeholder="janedoe@microsoft.com" id="txtEmail"
+                class="user">
+            <br>
+            <label id="lblBirthYear">birthyear : </label> <input type='number' id="txtBirthYear" placeholder="1867"
+                class="user">
+            <br>
+            <input type="submit" value="Submit">
+            <input type="button" value="Add" class="admin" onclick="addBooks()" />
+            <input type="button" value="Remove" class="admin" onclick="removeBooks()" />
+            <input type="button" value="Logout" class="admin" onclick="logout()" />
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- 2. Display a list of at least 10 items from books and CD’s including a picture of the 
+        item and name in English. 
+        Books are due in 30 days and CD’s are due in 10 days.
+    -->
+
+    <div id="content-part-2">
+
+        <h1>Library Checkout 2)</h1>
+        <h2>2a) Items Available:</h2> 
+
+        <label>Select a language :</label>
+        <select id="books-list-lang" onchange="language()">
+            <option>Select Language </option>
+            <option>English</option>
+            <option>French</option>
+            <option>Spanish</option>
+        </select>
+
+        <ol id="books-list">
+            <li class=book id="li_0" value="0">Do Androids Dream of Electric Sheep?<img src="./images/Do-Androids-Dream-of-Electric-Sheep1.jpg"><input type="button" value="add" onclick="addToBasket(this)"><p>Due Date : 30 days</p></li>
+            <li class=book id="li_1" value="1" >A Clockwork Orange<img src="./images/untitled.png"><input type="button" value="add" onclick="addToBasket(this)"><p>Due Date : 30 days</p></li>
+            <li class=book id="li_2" value="2">The Masacre<img src="./images/50.jpg"><input type="button" value="add" onclick="addToBasket(this)"><p>Due Date : 10 days</p>
+
+            </li>
+           
+        </ol>
+
+        <hr>
+
+        <h2>2b) Checkout List : </h2>
+
+        <ol id="basket">
+        </ol>
+
+        <input type="button" value="Checkout" onclick="checkout()">
+        <dialog id="myDialog">This is a dialog window
+        </dialog>
+
+    </div>
+
+</body>
+
+</html>
